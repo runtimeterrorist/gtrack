@@ -9,7 +9,7 @@ print("Enter your target gas/gwei price: ")
 price=int(input())
 
 #when the target price is met send a notification
-@schedule.scheduled_job('interval', seconds=5) #api has a rate of 5calls/second 
+@schedule.scheduled_job('interval', seconds=5) #api has a rate of 5calls/second,job is scheduled to check the prices every 5 seconds 
 def checkgas():
     response = requests.get("https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=<YOURAPIKEYHERE>")
     data=response.json()
