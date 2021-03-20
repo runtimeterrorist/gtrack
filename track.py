@@ -21,7 +21,7 @@ def checkgas():
     print("Fast gas price: " + data['result']['FastGasPrice'])
     print("#============================================#")
 
-    currentgwei = int(data['result']['SafeGasPrice'])
+    currentgwei = int(data['result']['SafeGasPrice']) #using safegasprice
     response2 = requests.get("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=<YOURAPIKEYHERE>")
     data2=response2.json()
     ethusd = data2['result']['ethusd']
