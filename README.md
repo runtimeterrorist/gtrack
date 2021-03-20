@@ -1,2 +1,2 @@
 # gtrack
-Ethereum gwei tracker and price calculator using etherscan.io API
+Ethereum gwei tracker/notifier using etherscan.io API written in python
